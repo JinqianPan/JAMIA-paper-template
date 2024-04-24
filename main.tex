@@ -1,0 +1,80 @@
+\documentclass[twoside, 8pt]{article}
+
+\usepackage{lipsum}
+\usepackage{JAMIA}
+% \usepackage{fontspec}
+\usepackage{setspace}
+
+
+\title{My Cool Title Here}
+\author[1, 2]{Author One, MD}
+\author[2]{Author Two, PhD}
+\author[1]{Author Three, PhD}
+\affil[1]{Institution One, Country;}
+\affil[2]{Institution Two, Country}
+\date{}
+
+\begin{document}
+
+% \par\noindent\rule[-7pt]{15.5cm}{0.2em}
+\maketitle
+
+\small
+\abstractSection
+{This is a cool work. Cool works must be accepted. So, accept this work.} % Objective
+{\lipsum[1]} % Materials and Methods
+{\lipsum[2]} % Results
+{\lipsum[3]} % Discussion
+{\lipsum[4]} % Conclusion
+{deep learning, machine learning} % Key words
+
+\par\noindent\rule[-7pt]{15.5cm}{0.2em}
+\vspace{0.2cm}
+
+\begin{multicols*}{2}
+
+% Introduction
+%==============================
+\section*{Introduction}
+\lipsum[3-4] \cite{he2016deep}
+%==============================
+
+% Materials and Methods
+%==============================
+\section*{Materials and Methods}
+\subsection*{Study overview}
+\lipsum[3-4]
+%==============================
+
+% Results
+%==============================
+\section*{Results}
+\lipsum[3-4]
+%==============================
+
+% Discussion
+%==============================
+\section*{Discussion}
+\lipsum[3-4]
+%==============================
+
+% Conclusion
+%==============================
+\section*{Conclusion}
+\lipsum[3-4]
+%==============================
+
+% Funding
+%==============================
+\section*{Funding}
+\lipsum[3-4]
+%==============================
+
+% Reference
+%==============================
+\bibliographystyle{vancouver}
+\bibliography{citiation}
+%==============================
+
+\end{multicols*}
+\end{document} 

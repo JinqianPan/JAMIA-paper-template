@@ -1,0 +1,70 @@
+\ProvidesPackage{JAMIA}
+\usepackage{fontspec}
+
+\usepackage[letterpaper, margin=2cm, top=2.54cm]{geometry}
+\usepackage{titlesec}
+\setlength{\columnsep}{0.5cm}
+\usepackage{authblk}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage[super,comma,sort&compress]{natbib}
+
+\newfontfamily\arialbold{Arial Bold}
+\newfontfamily\arial{Arial}
+
+\allsectionsfont{\arialbold\fontsize{11}{13}\selectfont\MakeUppercase}
+\subsectionfont{\arial\fontsize{10}{12}\selectfont}
+
+\makeatletter
+\renewcommand{\maketitle}{
+    \thispagestyle{empty}
+    \bgroup\setlength{\parindent}{0pt}
+    \begin{flushleft}
+        \LARGE{\fontspec{Arial Bold}\@title}
+
+        \renewcommand{\Authfont}{\large\bfseries}
+        \renewcommand{\Affilfont}{\normalsize\normalfont\fontspec{Arial}}
+        \setlength{\affilsep}{0.4cm}
+        \vspace{0.4cm}
+        {\fontspec{Arial}\@author}
+    \end{flushleft}\egroup
+}
+\makeatother
+
+\pagestyle{empty} % disables page numbers
+
+%==============================
+% Header
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[OL]{\textsf{\textbf{\thepage}}}
+\fancyhead[OR]{\footnotesize\textsf{\textit{Journal of the American Medical Informatics Association,} 2024, Vol. xx, No. x}}
+\fancyhead[EL]{\footnotesize\textsf{\textit{Journal of the American Medical Informatics Association,} 2024, Vol. xx, No. x}}
+\fancyhead[ER]{\textsf{\textbf{\thepage}}}
+%==============================
+
+%==============================
+% Abstract
+\newcommand{\abstractSection}[6]{%
+    {\fontspec{Arial}
+    \begin{spacing}{1.5}
+        \noindent\textbf{ABSTRACT}
+    \end{spacing}
+    \noindent\textbf{Objective:} #1\\
+    \textbf{Materials and Methods:} #2\\
+    \textbf{Results:} #3\\
+    \textbf{Discussion:} #4\\
+    \textbf{Conclusion:} #5
+    \\\\
+    \noindent\textbf{\textsf{Key words:}} #6
+    }
+}
+%==============================
+
+%==============================
+% Reference list option change
+\makeatletter
+\renewcommand\@biblabel[1]{#1.} % from [1] to 1
+\makeatother %
+%==============================
