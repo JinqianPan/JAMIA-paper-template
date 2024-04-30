@@ -1,4 +1,4 @@
-\documentclass[twoside, 8pt]{article}
+\documentclass[twocolumn, 8pt]{article}
 
 \usepackage{lipsum}
 \usepackage{JAMIA}
@@ -16,22 +16,24 @@
 
 \begin{document}
 
-% \par\noindent\rule[-7pt]{15.5cm}{0.2em}
-\maketitle
-
-\small
-\abstractSection
-{This is a cool work. Cool works must be accepted. So, accept this work.} % Objective
-{\lipsum[1]} % Materials and Methods
-{\lipsum[2]} % Results
-{\lipsum[3]} % Discussion
-{\lipsum[4]} % Conclusion
-{deep learning, machine learning} % Key words
-
 \par\noindent\rule[-7pt]{15.5cm}{0.2em}
-\vspace{0.2cm}
+\begin{strip}
+    \begin{minipage}{.88\textwidth}
+        \maketitle
+        \small
+        \abstractSection
+        {This is a cool work. Cool works must be accepted. So, accept this work.} % Objective
+        {} % Materials and Methods
+        {} % Results
+        {} % Discussion
+        {} % Conclusion
+        {deep learning, machine learning} % Key words
+        
+        \par\noindent\rule[-7pt]{15.5cm}{0.2em}
+        \hspace{2cm}
+    \end{minipage}
+\end{strip}
 
-\begin{multicols*}{2}
 
 % Introduction
 %==============================
@@ -76,5 +78,4 @@
 \bibliography{citiation}
 %==============================
 
-\end{multicols*}
 \end{document} 
