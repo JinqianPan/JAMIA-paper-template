@@ -19,8 +19,6 @@
 \usepackage{booktabs}
 \usepackage{array, caption, threeparttable}
 
-%==============================
-% Caption
 \DeclareCaptionLabelSeparator{dot}{.\space}
 \usepackage[font=small, labelfont=bf, labelsep=dot,]{caption}
 \captionsetup[table]{
@@ -31,26 +29,14 @@
     font=sf,
     singlelinecheck=false,
 }
-%==============================
 
-
-
-
-%==============================
-% Section, subsection, subsubsection
 \newfontfamily\arialbold{Arial Bold}
 \newfontfamily\arial{Arial}
 
 \allsectionsfont{\arialbold\fontsize{11}{13}\selectfont\MakeUppercase}
 \subsectionfont{\arial\fontsize{10}{12}\selectfont}
 \subsubsectionfont{\fontsize{9}{11}\selectfont}
-%==============================
 
-
-
-
-%==============================
-% Title
 \makeatletter
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
@@ -66,29 +52,28 @@
     \end{flushleft}\egroup
 }
 \makeatother
-%==============================
 
-
-
-
-%==============================
 \pagestyle{empty} % disables page numbers
-
-
-
 
 %==============================
 % Header
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[OL]{\textsf{\textbf{\thepage}}}
-\fancyhead[OR]{\footnotesize\textsf{\textit{Journal of the American Medical Informatics Association,} 2024, Vol. xx, No. x}}
-\fancyhead[EL]{\footnotesize\textsf{\textit{Journal of the American Medical Informatics Association,} 2024, Vol. xx, No. x}}
-\fancyhead[ER]{\textsf{\textbf{\thepage}}}
+\fancyhead[L]{
+    \ifodd\value{page}
+        \textsf{\textbf{\thepage}}
+    \else
+        \footnotesize\textsf{\textit{Journal of the American Medical Informatics Association,} 2024, Vol. xx, No. x}
+\fi}
+
+\fancyhead[R]{
+    \ifodd\value{page}
+        \footnotesize\textsf{\textit{Journal of the American Medical Informatics Association,} 2024, Vol. xx, No. x}
+    \else
+        \textsf{\textbf{\thepage}}
+\fi}
+
 %==============================
-
-
-
 
 %==============================
 % Abstract
@@ -107,8 +92,6 @@
     }
 }
 %==============================
-
-
 
 
 %==============================
