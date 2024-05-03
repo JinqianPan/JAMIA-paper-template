@@ -93,33 +93,20 @@
 
 %==============================
 % Abstract
-\newcommand{\maketitleAndAbstractSection}[6]{%
-    \begin{strip}
-        \begin{minipage}{.88\textwidth}
-            \par\noindent\rule[-7pt]{15.5cm}{0.2em}
-            
-            \maketitle
-            
-            \small
-            {\fontspec{Arial}
-            \begin{spacing}{1.5}
-                \noindent\textbf{ABSTRACT}
-            \end{spacing}
-            \noindent\textbf{Objective:} #1\\
-            \textbf{Materials and Methods:} #2\\
-            \textbf{Results:} #3\\
-            \textbf{Discussion:} #4\\
-            \textbf{Conclusion:} #5
-            \\
-            \noindent\textbf{\textsf{Key words:}} #6
-            }
-            
-            \par\noindent\rule[-7pt]{15.5cm}{0.2em}
-            \hspace{2cm}
-        \end{minipage}
-    \end{strip}
+\newcommand{\abstractSection}[6]{%
+    {\fontspec{Arial}
+    \begin{spacing}{1.5}
+        \noindent\textbf{ABSTRACT}
+    \end{spacing}
+    \noindent\textbf{Objective:} #1\\
+    \textbf{Materials and Methods:} #2\\
+    \textbf{Results:} #3\\
+    \textbf{Discussion:} #4\\
+    \textbf{Conclusion:} #5
+    \\\\
+    \noindent\textbf{\textsf{Key words:}} #6
+    }
 }
-\endinput
 %==============================
 
 
