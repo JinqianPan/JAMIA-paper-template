@@ -10,3 +10,10 @@ The American Medical Informatics Association (JAMIA) paper basic template, inspi
 
 ## Bibliography
 This template uses `vancouver`.
+
+## Example
+The complete example is in the `build` folder.
+
+<p align="center">
+  <img src="./build/example.png" width="300">
+</p>
