@@ -18,25 +18,31 @@
 \usepackage[super,comma,sort&compress]{natbib}
 \usepackage{booktabs}
 \usepackage{array, caption, threeparttable}
+%==============================
 
+
+
+%==============================
+% Caption
 \DeclareCaptionLabelSeparator{dot}{.\space}
 \usepackage[font=small, labelfont=bf, labelsep=dot,]{caption}
-\captionsetup[table]{
-    font=sf,
-    singlelinecheck=false,
-}
-\captionsetup[figure]{
-    font=sf,
-    singlelinecheck=false,
-}
+\captionsetup[table]{font=sf, singlelinecheck=false}
+\captionsetup[figure]{font=sf, singlelinecheck=false}
+%==============================
 
-\newfontfamily\arialbold{Arial Bold}
-\newfontfamily\arial{Arial}
 
-\allsectionsfont{\arialbold\fontsize{11}{13}\selectfont\MakeUppercase}
-\subsectionfont{\arial\fontsize{10}{12}\selectfont}
+
+%==============================
+% Section, subsection, subsubsection
+\allsectionsfont{\fontspec{Arial}\fontsize{12}{13}\selectfont\MakeUppercase}
+\subsectionfont{\fontspec{Arial}\mdseries\fontsize{10}{12}\selectfont}
 \subsubsectionfont{\fontsize{9}{11}\selectfont}
+%==============================
 
+
+
+%==============================
+% maketitle
 \makeatletter
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
@@ -45,15 +51,23 @@
         \LARGE{\fontspec{Arial Bold}\@title}
 
         \renewcommand{\Authfont}{\large\bfseries}
-        \renewcommand{\Affilfont}{\normalsize\normalfont\fontspec{Arial}}
+        \renewcommand{\Affilfont}{\normalsize\normalfont\fontspec{Gillius ADF No2 Cond}}
         \setlength{\affilsep}{0.4cm}
         \vspace{0.4cm}
         {\fontspec{Arial}\@author}
+
     \end{flushleft}\egroup
 }
+
+\renewcommand\AB@affilsepx{\vspace{-0.3cm},  \protect\Affilfont} % make affil as a line
+\renewcommand\AB@authnote[1]{\textsuperscript{\fontspec{Arial}#1}} % change the font style for number
+\renewcommand\AB@affilnote[1]{\textsuperscript{\fontspec{Gillius ADF No2 Cond}#1}} % change the font style for number
 \makeatother
 
 \pagestyle{empty} % disables page numbers
+%==============================
+
+
 
 %==============================
 % Header
@@ -75,6 +89,8 @@
 \renewcommand{\headrulewidth}{1pt}
 %==============================
 
+
+
 %==============================
 % Abstract
 \newcommand{\abstractSection}[6]{%
@@ -92,6 +108,7 @@
     }
 }
 %==============================
+
 
 
 %==============================
