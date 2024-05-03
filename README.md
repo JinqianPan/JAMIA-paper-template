@@ -15,5 +15,5 @@ This template uses `vancouver`.
 The complete example is in the `build` folder.
 
 <p align="center">
-  <img src="./build/example.png" width="1000">
+  <img src="./img/example.png" width="1000">
 </p>
