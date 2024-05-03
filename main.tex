@@ -51,7 +51,54 @@
 % Results
 %==============================
 \section*{Results}
-\lipsum[3-4]
+
+\begin{table*}[hbt!]
+\setlength{\abovecaptionskip}{5pt}
+\caption{This is Table 1.}
+\label{tab::conv}
+\centering
+% \resizebox{\textwidth}{!}{
+\resizebox{13cm}{!}{
+    \begin{tabular}{lccccccc}
+        \toprule
+        & \multicolumn{7}{c}{\textbf{Table}} \\
+        \cline{2-8}
+        & \textbf{Table} & \textbf{Table} & \textbf{Table} & \textbf{Table} & \textbf{Table} & \textbf{Table} & \textbf{Table}\\
+        \midrule
+        \textbf{Table*} &&&&&& \\
+        \quad \# Within 6 Table &  &  &  &  &  &  & \\
+        \quad \# Within 12 Table &  &  &  &  &  &  & \\
+        \cline{1-8}
+        \# Average Table &  &  &  &  &  &  & \\
+        \cline{1-8}
+        \multicolumn{8}{l}{\small \quad*Table: table table}\\
+    \end{tabular}
+}
+\end{table*}
+
+\begin{table*}[hbt!]
+\setlength{\abovecaptionskip}{5pt}
+\caption{This is Table 2.}
+\centering
+\resizebox{13cm}{!}{
+\begin{tabular}{cccccc}
+    \toprule
+    \textbf{Table} & \textbf{Table} & \textbf{Within 6 Table} & \textbf{Within 12 Table} & \textbf{Within 24 Table} & \textbf{No Table} \\ 
+    \midrule
+    \multirow{4}{*}{\textbf{Big Table}}   
+        & Table &  &  &  &  \\
+        & Table &  &  &  &  \\
+        & Table &  &  &  &  \\
+        & Table &  &  &  &  \\
+    \cline{1-6}
+\end{tabular}
+}
+\label{tab::reuslt}
+\end{table*}
+
+\lipsum[3] \textbf{Table \ref{tab::conv}}
+
+\textbf{Table \ref{tab::reuslt}} \lipsum[4]
 %==============================
 
 % Discussion
