@@ -1,44 +1,31 @@
 \ProvidesPackage{JAMIA}
-\usepackage{fontspec}
+
 \usepackage[letterpaper, margin=2cm, top=2.54cm]{geometry}
+\usepackage{fontspec}
 \usepackage{titlesec}
-\setlength{\columnsep}{0.5cm}
-\usepackage{authblk}
-\usepackage{multicol}
-\usepackage{fancyhdr}
 \usepackage{sectsty}
-\usepackage{setspace}
+\usepackage{xcolor}
 \usepackage{color}
+
+\usepackage{authblk}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\usepackage{array, caption, threeparttable}
+\usepackage{booktabs}
+\usepackage{multicol}
 \usepackage{multirow}
 \usepackage{graphicx}
+
 \usepackage{amsfonts}
 \usepackage{amssymb}
+
 \usepackage{etoolbox}
 \usepackage{cuted}
 \usepackage[super,comma,sort&compress]{natbib}
-\usepackage{booktabs}
-\usepackage{array, caption, threeparttable}
 %==============================
 
-
-
-%==============================
-% Caption
-\DeclareCaptionLabelSeparator{dot}{.\space}
-\usepackage[font=small, labelfont=bf, labelsep=dot,]{caption}
-\captionsetup[table]{font=sf, singlelinecheck=false}
-\captionsetup[figure]{font=sf, singlelinecheck=false}
-%==============================
-
-
-
-%==============================
-% Section, subsection, subsubsection
-\allsectionsfont{\fontspec{Arial}\fontsize{12}{13}\selectfont\MakeUppercase}
-\subsectionfont{\fontspec{Arial}\mdseries\fontsize{10}{12}\selectfont}
-\subsubsectionfont{\fontsize{9}{11}\selectfont}
-%==============================
-
+\setlength{\columnsep}{0.5cm} % set gap between the columns
 
 
 %==============================
@@ -63,8 +50,26 @@
 \renewcommand\AB@authnote[1]{\textsuperscript{\fontspec{Arial}#1}} % change the font style for number
 \renewcommand\AB@affilnote[1]{\textsuperscript{\fontspec{Gillius ADF No2 Cond}#1}} % change the font style for number
 \makeatother
+%==============================
 
-\pagestyle{empty} % disables page numbers
+
+
+%==============================
+% Abstract
+\newcommand{\abstractSection}[6]{%
+    {\fontspec{Arial}
+    \begin{spacing}{1.5}
+        \noindent\textbf{ABSTRACT}
+    \end{spacing}
+    \noindent\textbf{Objective:} #1\\
+    \textbf{Materials and Methods:} #2\\
+    \textbf{Results:} #3\\
+    \textbf{Discussion:} #4\\
+    \textbf{Conclusion:} #5
+    \\\\
+    \noindent\textbf{\textsf{Key words:}} #6
+    }
+}
 %==============================
 
 
@@ -92,21 +97,20 @@
 
 
 %==============================
-% Abstract
-\newcommand{\abstractSection}[6]{%
-    {\fontspec{Arial}
-    \begin{spacing}{1.5}
-        \noindent\textbf{ABSTRACT}
-    \end{spacing}
-    \noindent\textbf{Objective:} #1\\
-    \textbf{Materials and Methods:} #2\\
-    \textbf{Results:} #3\\
-    \textbf{Discussion:} #4\\
-    \textbf{Conclusion:} #5
-    \\\\
-    \noindent\textbf{\textsf{Key words:}} #6
-    }
-}
+% Caption
+\DeclareCaptionLabelSeparator{dot}{.\space} % change : to .
+\usepackage[font=small, labelfont=bf, labelsep=dot,]{caption} % labelsep=dot, dot in previous line
+\captionsetup[table]{font=sf, singlelinecheck=false} % singlelinecheck=false: Align on the left
+\captionsetup[figure]{font=sf, singlelinecheck=false}
+%==============================
+
+
+
+%==============================
+% Section, subsection, subsubsection
+\allsectionsfont{\fontspec{Arial}\fontsize{12}{13}\selectfont\MakeUppercase} % font style, size, uppercase
+\subsectionfont{\fontspec{Arial}\mdseries\fontsize{10}{12}\selectfont}
+\subsubsectionfont{\fontsize{9}{11}\selectfont}
 %==============================
 
 
